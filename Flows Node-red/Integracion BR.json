@@ -1,0 +1,1127 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a87455ddddc1bfd9",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Sensor 2",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "cd1205259c65f1b8",
+            "a3cf3699b4262c63",
+            "bc57f70f767136ad",
+            "11ae9f28c179b332",
+            "29b689e851ac620a",
+            "b812cd8d077cfea7",
+            "153be785d288f7e3",
+            "157355f038894c6a",
+            "784721ceb64c4fb8",
+            "inj-ts",
+            "7a0458939fecf664",
+            "5490021c2ec5c82f"
+        ],
+        "x": 54,
+        "y": 699,
+        "w": 972,
+        "h": 362
+    },
+    {
+        "id": "221a59d55d76a251",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Sensor 1",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "555aa8057b5fb816",
+            "155b82b0bddb3938",
+            "b85e53db3af0249c",
+            "96d4386e7df8f9ca",
+            "b3aa831c8f336f3c",
+            "e7a581c3eeaf9086",
+            "d07327bfd9375087",
+            "494870de2857dee9",
+            "989cc6c1f4efec11",
+            "9ffc919089c99629",
+            "a9bc854e67fe0bfb",
+            "7d809891bafa41b2",
+            "bbe535d71a9c3df6",
+            "87ac2b31e53cafc0",
+            "fb0b133eba60f584",
+            "11c02ea0052c85b3"
+        ],
+        "x": 54,
+        "y": 219,
+        "w": 972,
+        "h": 402
+    },
+    {
+        "id": "d901e7434d8a2f33",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Sensor 2",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "bcb875856504a20e",
+            "958b54cb64293ccb",
+            "945e788690deaa10",
+            "03cb3347866a5cdc",
+            "120e93481aaed103",
+            "e5bf406de74a4d49",
+            "570213f0b25f232d",
+            "e4f53c05c0fc9698",
+            "d9bff7058042bb93"
+        ],
+        "x": 74,
+        "y": 1479,
+        "w": 852,
+        "h": 242
+    },
+    {
+        "id": "9ae0abfe982ecee6",
+        "type": "group",
+        "z": "f6f2187d.f17ca8",
+        "name": "Sensor 1",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "244c2118aaed7373",
+            "f7bb61990f1177c1",
+            "fbeac6ab2c16a0d2",
+            "ca6b7b8809c81e12",
+            "787232632e86580a",
+            "6a69b9ec09254f9a",
+            "210cb0c4d2a4347b",
+            "b5af2b41e462ca24",
+            "e241100a83581696"
+        ],
+        "x": 74,
+        "y": 1119,
+        "w": 812,
+        "h": 242
+    },
+    {
+        "id": "28c6ad731bf1a5b9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "90d1d128c0e974ae",
+        "type": "coap-server",
+        "name": "Coap_edu_thread_server",
+        "port": 5683,
+        "ipv6": true
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cd1205259c65f1b8",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:4d10:30d1:4df4:fad9]/sensor/temp",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET TEMP",
+        "x": 370,
+        "y": 740,
+        "wires": [
+            [
+                "11ae9f28c179b332"
+            ]
+        ]
+    },
+    {
+        "id": "a3cf3699b4262c63",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:4d10:30d1:4df4:fad9]/sensor/press",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET PRESS",
+        "x": 370,
+        "y": 880,
+        "wires": [
+            [
+                "29b689e851ac620a"
+            ]
+        ]
+    },
+    {
+        "id": "bc57f70f767136ad",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:4d10:30d1:4df4:fad9]/sensor/hum",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET HUM",
+        "x": 370,
+        "y": 1020,
+        "wires": [
+            [
+                "b812cd8d077cfea7"
+            ]
+        ]
+    },
+    {
+        "id": "11ae9f28c179b332",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 740,
+        "wires": [
+            [
+                "153be785d288f7e3"
+            ]
+        ]
+    },
+    {
+        "id": "29b689e851ac620a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 880,
+        "wires": [
+            [
+                "157355f038894c6a"
+            ]
+        ]
+    },
+    {
+        "id": "b812cd8d077cfea7",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1020,
+        "wires": [
+            [
+                "784721ceb64c4fb8"
+            ]
+        ]
+    },
+    {
+        "id": "153be785d288f7e3",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "",
+        "topic": "sensor2/temperatura",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 900,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "157355f038894c6a",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "",
+        "topic": "sensor2/presion",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 880,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "784721ceb64c4fb8",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "",
+        "topic": "sensor2/humedad_rel",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 900,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "inj-ts",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "x": 170,
+        "y": 740,
+        "wires": [
+            [
+                "cd1205259c65f1b8"
+            ]
+        ]
+    },
+    {
+        "id": "7a0458939fecf664",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "65",
+        "topic": "",
+        "x": 170,
+        "y": 880,
+        "wires": [
+            [
+                "a3cf3699b4262c63"
+            ]
+        ]
+    },
+    {
+        "id": "5490021c2ec5c82f",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "a87455ddddc1bfd9",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "70",
+        "topic": "",
+        "x": 170,
+        "y": 1020,
+        "wires": [
+            [
+                "bc57f70f767136ad"
+            ]
+        ]
+    },
+    {
+        "id": "555aa8057b5fb816",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:96e3:44c7:7ee7:ecf7]/sensor/temp",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET TEMP",
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "96d4386e7df8f9ca"
+            ]
+        ]
+    },
+    {
+        "id": "155b82b0bddb3938",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:96e3:44c7:7ee7:ecf7]/sensor/press",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET PRESS",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "b3aa831c8f336f3c"
+            ]
+        ]
+    },
+    {
+        "id": "b85e53db3af0249c",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:96e3:44c7:7ee7:ecf7]/sensor/hum",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET HUM",
+        "x": 370,
+        "y": 480,
+        "wires": [
+            [
+                "e7a581c3eeaf9086"
+            ]
+        ]
+    },
+    {
+        "id": "96d4386e7df8f9ca",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "d07327bfd9375087"
+            ]
+        ]
+    },
+    {
+        "id": "b3aa831c8f336f3c",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "494870de2857dee9"
+            ]
+        ]
+    },
+    {
+        "id": "e7a581c3eeaf9086",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 480,
+        "wires": [
+            [
+                "989cc6c1f4efec11"
+            ]
+        ]
+    },
+    {
+        "id": "d07327bfd9375087",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "",
+        "topic": "sensor1/temperatura",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "494870de2857dee9",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "",
+        "topic": "sensor1/presion",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "989cc6c1f4efec11",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "",
+        "topic": "sensor1/humedad_rel",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 900,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9ffc919089c99629",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "45",
+        "topic": "",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "555aa8057b5fb816"
+            ]
+        ]
+    },
+    {
+        "id": "a9bc854e67fe0bfb",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "50",
+        "topic": "",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "155b82b0bddb3938"
+            ]
+        ]
+    },
+    {
+        "id": "7d809891bafa41b2",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "55",
+        "topic": "",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "b85e53db3af0249c"
+            ]
+        ]
+    },
+    {
+        "id": "bbe535d71a9c3df6",
+        "type": "coap request",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "method": "GET",
+        "confirmable": false,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://[fd24:54c0:2d4a:1:96e3:44c7:7ee7:ecf7]/sensor/battery",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "COAP GET BAT",
+        "x": 360,
+        "y": 580,
+        "wires": [
+            [
+                "87ac2b31e53cafc0"
+            ]
+        ]
+    },
+    {
+        "id": "87ac2b31e53cafc0",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "fb0b133eba60f584"
+            ]
+        ]
+    },
+    {
+        "id": "fb0b133eba60f584",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "",
+        "topic": "sensor1/bateria",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 880,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "11c02ea0052c85b3",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "g": "221a59d55d76a251",
+        "name": "timestamp",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "bbe535d71a9c3df6"
+            ]
+        ]
+    },
+    {
+        "id": "bcb875856504a20e",
+        "type": "coap in",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "method": "POST",
+        "name": "Espera de POST temp",
+        "server": "90d1d128c0e974ae",
+        "url": "/sensor2/temp",
+        "x": 200,
+        "y": 1520,
+        "wires": [
+            [
+                "03cb3347866a5cdc"
+            ]
+        ]
+    },
+    {
+        "id": "958b54cb64293ccb",
+        "type": "coap in",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "method": "POST",
+        "name": "Espera de POST press",
+        "server": "90d1d128c0e974ae",
+        "url": "/sensor2/press",
+        "x": 200,
+        "y": 1600,
+        "wires": [
+            [
+                "120e93481aaed103"
+            ]
+        ]
+    },
+    {
+        "id": "945e788690deaa10",
+        "type": "coap in",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "method": "POST",
+        "name": "Espera de POST hum_rel",
+        "server": "90d1d128c0e974ae",
+        "url": "/sensor2/hum",
+        "x": 210,
+        "y": 1680,
+        "wires": [
+            [
+                "e5bf406de74a4d49"
+            ]
+        ]
+    },
+    {
+        "id": "03cb3347866a5cdc",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1520,
+        "wires": [
+            [
+                "570213f0b25f232d"
+            ]
+        ]
+    },
+    {
+        "id": "120e93481aaed103",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1600,
+        "wires": [
+            [
+                "e4f53c05c0fc9698"
+            ]
+        ]
+    },
+    {
+        "id": "e5bf406de74a4d49",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1680,
+        "wires": [
+            [
+                "d9bff7058042bb93"
+            ]
+        ]
+    },
+    {
+        "id": "570213f0b25f232d",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "name": "",
+        "topic": "sensor2/temperatura",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 800,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "e4f53c05c0fc9698",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "name": "",
+        "topic": "sensor2/presion",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 780,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "d9bff7058042bb93",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "d901e7434d8a2f33",
+        "name": "",
+        "topic": "sensor2/humedad_rel",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 800,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "244c2118aaed7373",
+        "type": "coap in",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "method": "POST",
+        "name": "Espera de POST temp",
+        "server": "90d1d128c0e974ae",
+        "url": "/sensor1/temp",
+        "x": 200,
+        "y": 1160,
+        "wires": [
+            [
+                "ca6b7b8809c81e12"
+            ]
+        ]
+    },
+    {
+        "id": "f7bb61990f1177c1",
+        "type": "coap in",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "method": "POST",
+        "name": "Espera de POST press",
+        "server": "90d1d128c0e974ae",
+        "url": "/sensor1/press",
+        "x": 200,
+        "y": 1240,
+        "wires": [
+            [
+                "787232632e86580a"
+            ]
+        ]
+    },
+    {
+        "id": "fbeac6ab2c16a0d2",
+        "type": "coap in",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "method": "POST",
+        "name": "Espera de POST hum_rel",
+        "server": "90d1d128c0e974ae",
+        "url": "/sensor1/hum",
+        "x": 210,
+        "y": 1320,
+        "wires": [
+            [
+                "6a69b9ec09254f9a"
+            ]
+        ]
+    },
+    {
+        "id": "ca6b7b8809c81e12",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1160,
+        "wires": [
+            [
+                "210cb0c4d2a4347b"
+            ]
+        ]
+    },
+    {
+        "id": "787232632e86580a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1240,
+        "wires": [
+            [
+                "b5af2b41e462ca24"
+            ]
+        ]
+    },
+    {
+        "id": "6a69b9ec09254f9a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "name": "String a numero puro",
+        "func": "msg.payload = parseFloat(String(msg.payload).trim());\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1320,
+        "wires": [
+            [
+                "e241100a83581696"
+            ]
+        ]
+    },
+    {
+        "id": "210cb0c4d2a4347b",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "name": "",
+        "topic": "sensor1/temperatura",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 760,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "b5af2b41e462ca24",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "name": "",
+        "topic": "sensor1/presion",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 740,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "e241100a83581696",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "g": "9ae0abfe982ecee6",
+        "name": "",
+        "topic": "sensor1/humedad_rel",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28c6ad731bf1a5b9",
+        "x": 760,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "bc860267ad64f18f",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-coap": "0.8.0"
+        }
+    }
+]
