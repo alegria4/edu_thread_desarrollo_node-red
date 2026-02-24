@@ -46,6 +46,15 @@ Para terminar, en esta última ventana se encuentran las diferentes graficas de 
 
 <img width="886" height="404" alt="image" src="https://github.com/user-attachments/assets/2656418c-c112-4ed9-9732-5b2b8b5286c1" />
 
- 
+## Base de datos
+
+La base de datos fue implementada en SQLite mediante la herramienta DB Browser. Esta cuenta con una parte dedicada a el registro y al acceso al sistema de los usuarios y otra para el almacenamiento de los datos. 
+
+El siguiente diagrama muestra las diferentes tablas planteadas en ella:
+
+<img width="886" height="463" alt="image" src="https://github.com/user-attachments/assets/9e0d396b-df72-42fa-8ade-74e3ea7b74a3" />
+
+Las consultas e incorporaciones de datos se realizan desde el PC a medida que van llegando las medidas y se va interactuando con la Interfaz Humano-Maquina.
+
 
 
