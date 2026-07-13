@@ -1,24 +1,6 @@
-## Descripcion del sistema
-El sistema implementado consta de una red IoT con diferentes nodos sensores encargados 
-de realizar medidas periódicamente y toda una arquitectura capaz de hacer que esas 
-medidas lleguen al ordenador para ser almacenadas en una base de datos y se muestren 
-en pantalla mediante un HMI. 
+Este repositorio contiene el desarrollo de la interfaz HMI implementada mediante Node-RED, encargada de la supervisión y control del sistema IoT. A través de esta interfaz es posible visualizar en tiempo real las variables medidas por los nodos sensores, consultar el estado del sistema y actuar sobre el nodo actuador mediante el control del relé.
 
-El esquema que representa el sistema implementado es el siguiente:
-<img width="886" height="493" alt="image" src="https://github.com/user-attachments/assets/4790078a-971e-42f2-8b1a-259b75558129" />
-
-## Integracion en el BR
-
-<img width="1134" height="374" alt="image" src="https://github.com/user-attachments/assets/d277489a-f403-4a70-9814-4fc6d5abbcf9" />
-
-La imagen muestra lo que se realiza en node-red dentro del border router. El BR funciona como servidor COAP y espera los post de los clientes para luego pasarselos al
-broker para que lo envie al ordenador.
-
-## Integracion en el ordenador
-
-<img width="962" height="673" alt="image" src="https://github.com/user-attachments/assets/00fe4c9f-8ddd-4708-bd69-bcb49e2c58c2" />
-
-En el ordenador, recibimos los mensajes del broker y los enviamos tanto al HMI para que se vean en tiempo real como a la base de datos para almacenarlos.
+La interfaz se comunica con el sistema a través del bróker MQTT, suscribiéndose a los distintos tópicos donde se publican las medidas procedentes de los sensores. Del mismo modo, permite modificar el periodo de muestreo y el estado del relé, publicando los valores correspondientes para que sean procesados por el servidor CoAP y enviados a los nodos de la red Thread. Además, la interfaz integra la visualización de los datos almacenados en la base de datos, proporcionando una supervisión centralizada del sistema.
 
 ## HMI (GUIA DE USO)
 
