@@ -3,6 +3,8 @@ Este repositorio contiene el desarrollo de la interfaz HMI implementada mediante
 
 La interfaz se comunica con el sistema a través del bróker MQTT, suscribiéndose a los distintos tópicos en los que se publican las medidas procedentes de los sensores. 
 
+Se adjunta tambien al repositorio el manual de usuario del HMI.
+
 ## Base de datos
 
 La base de datosn del sistema fue implementada en SQLite mediante la herramienta DB Browser. Esta cuenta con una parte dedicada a el registro y al acceso al sistema de los usuarios y otra para el almacenamiento de los datos. 
