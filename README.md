@@ -9,7 +9,7 @@ La base de datosn del sistema fue implementada en SQLite mediante la herramienta
 
 El siguiente diagrama muestra las diferentes tablas planteadas en ella:
 
-<img width="886" height="463" alt="image" src="https://github.com/user-attachments/assets/9e0d396b-df72-42fa-8ade-74e3ea7b74a3" />
+<img width="1792" height="872" alt="Captura de pantalla 2026-06-15 113104" src="https://github.com/user-attachments/assets/eb795537-1934-4aec-8ffa-6e3eac89120c" />
 
 Las consultas e incorporaciones de datos se realizan desde el PC a medida que van llegando las medidas y se va interactuando con la Interfaz Humano-Maquina.
 
